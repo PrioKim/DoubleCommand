@@ -12,5 +12,5 @@ while iter_date != end_date:
         get_params = {'loadEnd':'0', 'searchType':'excel', 'sSearchFrom':str_date, 'sSearchTo':str_date}
 
         r = requests.get(url, allow_redirects=True, params=get_params)
-        open(str_date + 'xls', 'wb').write(r.content)
+        open(str_date + '.xls', 'wb').write(r.content)
         iter_date = iter_date + datetime.timedelta(days=1)
